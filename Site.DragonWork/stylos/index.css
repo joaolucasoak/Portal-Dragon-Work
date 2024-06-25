@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+
+
+/* cores do site */
+:root {
+    --cor1: #ff1400;
+    --cor2: #FF5C00;
+    --cor3: #58ada0;
+    --cor4: #006a95;
+    --cor5: #a7d0d6;
+}
+
+/* Estilos básicos para começar */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: var(--cor5);
+    color: #333;
+}
+
+nav ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--cor5);
+    /* Adicione um fundo para destacar a navegação */
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    padding: 10px;
+    color: var(--cor4);
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 1s, color 0.5s;
+    /* Suaviza a transição de cores */
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    /* Fundo inicial para os links */
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+}
+
+nav ul li ul.dropdown {
+    width: 100%;
+    height: 100%;
+    background: var(--cor5);
+    position: absolute;
+    display: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor2);
+    color: #fff;
+    /* Melhora o contraste ao passar o mouse */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: var(--cor4);
+}
+
+p {
+    margin: 10px 0;
+}
+
+.botao-iniciar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #58ada0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.imgheader {
+    width: 100%;
+}

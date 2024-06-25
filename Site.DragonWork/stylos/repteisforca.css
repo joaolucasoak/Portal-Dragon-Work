@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    background-color: lightgreen;
+  }
+  
+  .main {
+    background-color: white;
+    min-height: calc(100vh - 38px);
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .main h1 {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  #categories {
+    text-align: center;
+  }
+  
+  #categories p {
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+  
+  #categories button {
+    margin: 0 4px;
+    width: 80px;
+    padding: 2px;
+    font-size: 1.1rem;
+  }
+  
+  .main__gallows {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+  }
+  
+  .main__letter {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .main__letter p {
+    padding: 20px;
+  }
+  
+  #buttons{
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main__buttons button{
+    padding: 4px;
+    margin: 10px 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .main__result {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .main__result div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main__result div:nth-child(2) {
+    padding: 50px;
+  }
+  
+  .main__result button{
+    padding: 4px;
+    margin: 5px 2px;
+    width: 120px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  footer {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  footer a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer a:visited {
+    color: white;
+  }
+  
+  
+  @media screen and (max-width: 425px) {
+  
+    #categories div{
+      display: flex;
+    }
+  
+    #result {
+      text-align: center;
+    }
+  }

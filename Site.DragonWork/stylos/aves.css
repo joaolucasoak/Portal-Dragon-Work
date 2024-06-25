@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #ff1400; 
+    --cor2: #FF5C00;  
+    --cor3: #58ada0;  
+    --cor4: #006a95;  
+    --cor5: #a7d0d6;
+}
+
+/* Estrutura e Layout */
+body {
+    background-color: var(--cor5);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--cor5);
+    /* Adicione um fundo para destacar a navegação */
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    padding: 10px;
+    color: var(--cor4);
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 1s, color 0.5s;
+    /* Suaviza a transição de cores */
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    /* Fundo inicial para os links */
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+}
+
+nav ul li ul.dropdown {
+    width: 100%;
+    height: 100%;
+    background: var(--cor5);
+    position: absolute;
+    display: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor2);
+    color: #fff;
+    /* Melhora o contraste ao passar o mouse */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Conteúdo */
+article {
+    background-color: #fff;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 , h2 , h3 , h4 {
+    text-align: center;
+    font-size: 2.5em; /* Ajustado para usar unidades relativas */
+    color: var(--cor4); /* Usando variáveis para cor */
+    margin: 0.5em 0; /* Ajuste na margem para espaçamento */
+}
+
+/* Imagens */
+.repteisheader, .tartaruga, .cobra, .crocodilo, .tatuara {
+    max-width: 500px;
+    display: block;
+    margin: 20px auto; /* Ajuste para adicionar espaçamento vertical */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 300px; /* Altura do container, ajuste conforme necessário */ 
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor5);
+    padding: 20px;
+}
+
+footer .wrapper {
+    background-color: var(--cor5);
+}
+
+footer .main {
+    background-color: white;
+    min-height: calc(100vh - 38px); /* 38px compensa altura adicional, talvez de um footer ou header */
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo do Rodapé e Jogo da Memória */
+footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer .wrapper {
+    background-color: var(--cor5);
+}
+
+footer .main {
+    background-color: white;
+    min-height: calc(100vh - 38px); /* 38px compensa altura adicional, talvez de um footer ou header */
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .main h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+footer #categories {
+    text-align: center;
+}
+
+footer #categories p {
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+footer #categories button {
+    margin: 0 4px;
+    width: 80px;
+    padding: 2px;
+    font-size: 1.1rem;
+}
+
+footer .main__gallows {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+footer .main__letter {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+footer .main__letter p {
+    padding: 20px;
+}
+
+footer #buttons {
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .main__buttons button {
+    padding: 4px;
+    margin: 10px 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+footer .main__result {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+footer .main__result div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .main__result div:nth-child(2) {
+    padding: 50px; /* Maior espaçamento para o segundo div, se aplicável */
+}
+
+footer .main__result button {
+    padding: 4px;
+    margin: 5px 2px;
+    width: 120px;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 425px) {
+    footer #categories div {
+        display: flex;
+        flex-direction: column; /* Altera para coluna em telas menores */
+    }
+
+    footer #result {
+        text-align: center;
+    }
+}
+
+.next-page {
+    text-align: center;
+    margin-right: 20px; /* Ajuste conforme necessário para alinhamento no canto */
+}
+
+.next-page-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor2); 
+    color: white; /* Adicionei cor de texto branca */
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.next-page-button:hover {
+    background-color: var(--cor4);
+}
+
+/* Estilo da caixa do Jogo da Memória */
+.memory-game-container {
+    width: 400px; /* Defina a largura desejada */
+    margin: 80px auto; /* Centralize verticalmente e adicione margem superior */
+    padding: 20px; /* Reduza o preenchimento para evitar que a caixa fique muito grande */
+    border: 2px solid var(--cor4);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 100px; /* Reduzindo a largura máxima do tabuleiro */
+    margin: 0 auto;
+}
+
+.board img {
+    width: 20px; /* Reduzindo o tamanho das imagens */
+    height: 20px; /* Reduzindo o tamanho das imagens */
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.board img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}

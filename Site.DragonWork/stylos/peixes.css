@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #ff1400; 
+    --cor2: #FF5C00;  
+    --cor3: #58ada0;  
+    --cor4: #006a95;  
+    --cor5: #a7d0d6;
+}
+
+/* Estrutura e Layout */
+body {
+    background-color: var(--cor5);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--cor5);
+    /* Adicione um fundo para destacar a navegação */
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    padding: 10px;
+    color: var(--cor4);
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 1s, color 0.5s;
+    /* Suaviza a transição de cores */
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    /* Fundo inicial para os links */
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+}
+
+nav ul li ul.dropdown {
+    width: 100%;
+    height: 100%;
+    background: var(--cor5);
+    position: absolute;
+    display: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor2);
+    color: #fff;
+    /* Melhora o contraste ao passar o mouse */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Conteúdo */
+article {
+    background-color: #fff;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 , h2 , h3 , h4 {
+    text-align: center;
+    font-size: 2.5em; /* Ajustado para usar unidades relativas */
+    color: var(--cor4); /* Usando variáveis para cor */
+    margin: 0.5em 0; /* Ajuste na margem para espaçamento */
+}
+
+/* Imagens */
+.repteisheader, .tartaruga, .cobra, .crocodilo, .tatuara {
+    max-width: 500px;
+    display: block;
+    margin: 20px auto; /* Ajuste para adicionar espaçamento vertical */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 300px; /* Altura do container, ajuste conforme necessário */ 
+    padding: 20px; }
+    
+
+footer {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .wrapper {
+        background-color: var(--cor5);
+    }
+    
+    .main {
+        background-color: white;
+        min-height: calc(100vh - 38px); /* 38px compensa altura adicional, talvez de um footer ou header */
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .main h1 {
+        text-align: center;
+        padding: 40px;
+    }
+    
+    #categories {
+        text-align: center;
+    }
+    
+    #categories p {
+        padding: 20px;
+        font-size: 1.4rem;
+    }
+    
+    #categories button {
+        margin: 0 4px;
+        width: 80px;
+        padding: 2px;
+        font-size: 1.1rem;
+    }
+    
+    .main__gallows {
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+    
+    .main__letter {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.6rem;
+    }
+    
+    .main__letter p {
+        padding: 20px;
+    }
+    
+    #buttons {
+        margin: auto;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main__buttons button {
+        padding: 4px;
+        margin: 10px 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .main__result {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .main__result div {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main__result div:nth-child(2) {
+        padding: 50px; /* Maior espaçamento para o segundo div, se aplicável */
+    }
+    
+    .main__result button {
+        padding: 4px;
+        margin: 5px 2px;
+        width: 120px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+
+    
+    @media screen and (max-width: 425px) {
+        #categories div {
+            display: flex;
+            flex-direction: column; /* Altera para coluna em telas menores */
+        }
+    
+        #result {
+            text-align: center;
+        }
+    }
+      }
+      .next-page {
+        text-align: center;
+        margin-right: 20px; /* Ajuste conforme necessário para alinhamento no canto */
+      }
+      
+      .next-page-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--cor2); 
+        color: white; /* Adicionei cor de texto branca */
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      
+      .next-page-button:hover {
+        background-color: var(--cor4);
+      }
+
+      aside article {
+
+        .question__container {
+            background-color: #B9930C;
+            border-radius: 5px;
+            padding: 30px;
+         }
+         
+         .lead {
+            background-color: green;
+            border-radius: 5px;
+            padding: 15px;
+         }
+         
+         .form-check-label {
+            font-size: 1.125rem;
+         }
+         
+         input {
+            margin-right: 5px;
+         }
+         
+         .btn {
+            padding: 15px 60px;
+         }
+         
+         .bg-quiz {
+            background-color: #002704;
+         }
+         
+         /* MODAL SCORE */
+         
+         .popup-wrapper {
+            display: none;
+            background: rgba(0,0,0,.7);
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+         }
+         
+         .popup {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            
+            text-align: center;
+            margin: 20px auto;
+            padding: 40px;
+            border-radius: 5px;
+            background: #fff;
+         }
+         
+         .popup-content {
+            margin-top: 20px;
+         }
+         
+         .popup-close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+         }
+         
+         .popup-score {
+            font-size: 4rem;
+         }
+         
+         .popup-button {
+            display: block;
+            width: 120px;
+            margin: 20px auto 0 auto;
+         
+            border: none;
+            padding: 10px 25px;
+            background-color: #0095FF;
+            color: #fff;
+         }
+      }
